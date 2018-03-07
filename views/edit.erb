@@ -1,0 +1,31 @@
+<form method="post" action="/courses/update">
+<table>
+<tr> <td>
+      <label for="title">Title:</label>
+    </td>
+    <td>
+      <input type="text" name="title" value="<%= @course.title %>">
+</td> </tr>
+<tr> <td>
+      <label for="instructor">Instructor:</label>
+    </td>
+    <td>
+      <input type="text" name="instructor" value="<%= @course.instructor %>">
+</td> </tr>
+<tr> <td>
+      <label for="semester">Semester:</label>
+    </td>
+    <td>
+      <input type="text" name="semester" value="<%= @course.semester %>">
+</td> </tr>
+<tr> <td>
+</td> <td>
+
+      <input type='hidden' name='id' value='<%= @course.id %>' />
+      <input type="submit">
+    </td>
+  </tr>
+</table>
+</form>
+
+

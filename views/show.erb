@@ -1,0 +1,15 @@
+<ul>
+	<li>Course : <%= @course.title %> </li>
+	<li>Instructor : <%= @course.instructor %></li>
+	<li>Semester : <%= @course.semester %></li>
+</ul>
+<form action='/courses/<%= @course.id %>' method='POST'>
+    <input type='hidden' name='_method' value='DELETE'/>
+    <input type='hidden' name='id' value='<%= @course.id %>' />
+    <button type='submit'>X</button>
+</form>
+<form action='/courses/edit' method='POST'>
+    <input type='hidden' name='_method' value='EDIT'/>
+    <input type='hidden' name='id' value='<%= @course.id %>' />
+    <button type='submit'>Edit Course</button>
+</form>

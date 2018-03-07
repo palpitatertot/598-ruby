@@ -1,0 +1,7 @@
+<h1>Courses I took</h1> 
+<ul>
+	<% @courses.each do |course| %> 
+		<li> <a href=<%= "courses/" + course.id.to_s %>><%= course.title %> </a></li>
+	<%end %>
+</ul>
+<a href="./courses/new">Add New Course</a>
